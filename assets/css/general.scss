@@ -1,0 +1,19 @@
+@use 'variables' as var;
+
+/* GENERAL #################################################*/
+body {
+    padding-top: 10px !important;
+    background-color: var.$col-ppal-claro;
+
+    main {
+        margin-top: 70px;
+        padding: 0 15px;
+    }
+
+    footer {
+        margin-top: 20px;
+        flex-shrink: 0;
+        padding: 10px;
+    }
+
+}

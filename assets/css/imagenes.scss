@@ -1,0 +1,31 @@
+
+.imagen-destacada {
+    max-width: 100%; //que la imagen no sea más ancha que su contenedor 
+    height: auto; // Mantiene la proporción de la imagen 
+    margin: 20px auto; // Centra la imagen y agrega un margen 
+    transition: transform 0.3s ease; // Transición suave para el efecto hover 
+    //padding: 20px;
+}
+
+.imagen-destacada:hover {
+    transform: scale(1.1); // Amplía la imagen al 110% de su tamaño original 
+}
+
+/* CARROUSEL #################################################*/
+.carousel-inner {
+    max-height: 600px;
+    overflow: hidden;
+}
+
+.carousel-item img {
+    width: 100%;  // Ocupa el 100% del ancho del contenedor 
+    height: auto;    // Mantiene la proporción 
+    max-height: 600px; // Altura máxima para el carrusel 
+    object-fit: cover; // Asegura que la imagen cubra el espacio sin distorsionarse 
+}
+
+.carousel {
+    max-width: 720px;
+    margin: 0 auto;
+    overflow: hidden;
+}

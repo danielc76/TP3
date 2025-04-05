@@ -1,0 +1,58 @@
+@use 'variables' as var;
+
+.item1 {
+    grid-area: item1;
+}
+
+.item2 {
+    grid-area: item2;
+    background: var.$col-ppal-medio;
+    padding: 5%;    
+}
+
+.item3 {
+    grid-area: item3;
+    background: var.$col-ppal-medio;
+    padding: 5%;
+}
+
+
+.area {
+    display: grid;
+    grid-template-columns: 1;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+        "item1"
+        "item2"
+        "item3";
+}
+
+.area-destacada{
+    @extend .area;
+}
+
+  // Luego las reglas anidadas
+  @media (min-width: 768px) {
+    .area {
+        display: grid;
+        grid-template-columns: 2fr 3fr;
+        grid-template-rows: auto auto;
+        grid-template-areas:
+            "item1 item1"
+            "item2 item3";
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .area {
+        display: grid;
+        grid-template-columns: 5% 2fr 3fr 5%;
+        grid-template-rows: auto auto;
+        grid-template-areas:
+            "item1 item1 item1 item1"
+            ". item2 item3 .";
+    }
+  }
+
+
+

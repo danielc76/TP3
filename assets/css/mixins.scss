@@ -1,0 +1,24 @@
+
+@use "sass:map";
+
+/***** TIPOGRAFIAS ************/
+
+$font-sizes: (
+  mobile: 14px,
+  tablet: 18px,
+  desktop: 20px
+);
+
+@mixin font-size($multiplier: 1) {
+  // Todas las propiedades primero
+  font-size: map.get($font-sizes, mobile) * $multiplier;
+  
+  // Luego las reglas anidadas
+  @media (min-width: 768px) {
+    font-size: map.get($font-sizes, tablet) * $multiplier;
+  }
+  
+  @media (min-width: 1024px) {
+    font-size: map.get($font-sizes, desktop) * $multiplier;
+  }
+}

@@ -1,0 +1,18 @@
+/***** COLORES ************/
+
+    @use "sass:color"; // Importa el módulo nativo de Sass
+
+    $col-ppal:#d95904;//  #d95904;
+    // PARAMETROS color.adjust($color, $red: x, $green: x, $blue: x, $hue: x, $saturation: x, $lightness: x, $alpha: x);
+
+    $col-ppal-fuerte: color.adjust($col-ppal, $hue: -2deg, $saturation:50%);
+    $col-sec: color.adjust($col-ppal, $hue: 180deg); // Color COMPLEMENTARIO
+    $col-ppal-claro: color.scale($col-ppal, $lightness: 80%); // Aumenta la luminosidad  
+    $col-ppal-medio: color.scale($col-ppal, $lightness: 30%); // Aumenta la luminosidad  
+    $col-sec-oscuro: color.scale($col-sec, $lightness: -50%); //  más oscuro
+    $col-ppal-oscuro: color.scale($col-ppal, $lightness: -50%); //  más oscuro
+    $col-sec-claro: color.scale($col-sec, $lightness: 20%);
+    $col-letra: #333333;   
+    
+
+

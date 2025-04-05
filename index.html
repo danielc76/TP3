@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio - EmprenRed</title>
+    <!-- cdn Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Enlace a AOS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <!-- Estilos en CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+    <header>
+        <!-- Bloque Menú -->
+        <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">
+                    <img src="assets/img/loguito.gif" alt="Logo EmprenRed" width="35" height="35"
+                        class="d-inline-block align-text-medium">
+                    EmprenRed |
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div id="navbarNav" class="collapse navbar-collapse">
+                    <ul class="navbar-nav">
+                        <!-- Menú Home  -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link active dropdown-toggle" href="index.html" id="navbarDropdown"
+                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Home
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <!-- Opciones del menú desplegable -->
+                                <li><a class="dropdown-item" href="index.html#bienvenidos">Bienvenidxs</a></li>
+                                <li><a class="dropdown-item" href="index.html#sobre-proyecto">Sobre el proyecto</a></li>
+                                <li><a class="dropdown-item" href="index.html#quienes-somos">¿Quiénes somos?</a></li>
+                                <li><a class="dropdown-item" href="index.html#apoyos">Apoyos</a></li>
+                                <li><a class="dropdown-item" href="index.html#contacto">Contactanos</a></li>
+                            </ul>
+                        </li>
+
+                        <!-- Servicios  -->
+                        <li class="nav-item"><a class="nav-link" href="pages/servicios.html">Servicios</a></li>
+
+                        <!-- Catálogo  -->
+                        <!--                         <li class="nav-item"><a class="nav-link" href="pages/catalogo.html">Catálogo</a></li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link active dropdown-toggle" href="pages/catalogo.html" id="navbarDropdown"
+                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Catálogo
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="pages/catalogo.html#item-1">Calzado</a></li>
+                                <li><a class="dropdown-item" href="pages/catalogo.html#item-2">Clases</a></li>
+                                <li><a class="dropdown-item" href="pages/catalogo.html#item-3">Comidas</a></li>
+                            </ul>
+                        </li>
+ -->
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="pages/catalogo.html" id="navbarDropdown"
+                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Catálogo
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <!-- Calzado con submenú -->
+                                <li class="dropdown-submenu">
+                                    <a class="dropdown-item dropdown-toggle" href="#">Calzado</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="pages/catalogo.html#item-1-1">Zapatillas</a>
+                                        </li>
+                                        <li><a class="dropdown-item" href="pages/catalogo.html#item-1-2">Botas</a></li>
+                                        <li><a class="dropdown-item" href="pages/catalogo.html#item-1-3">Sandalias</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <!-- Clases -->
+                                <li><a class="dropdown-item" href="pages/catalogo.html#item-2">Clases</a></li>
+                                <!-- Comidas -->
+                                <li><a class="dropdown-item" href="pages/catalogo.html#item-3">Comidas</a></li>
+                            </ul>
+                        </li>
+
+
+
+                        <li class="nav-item"><a class="nav-link" href="pages/tips.html">Tips</a></li>
+                        <!-- Menú Animate -->
+                        <!-- Menú Empleos  -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="pages/bolsa_empleo.html" id="navbarDropdown"
+                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Empleos
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <!-- Opciones del menú desplegable -->
+                                <li><a class="dropdown-item" href="pages/bolsa_empleo.html#tecnologia">Tecnología</a>
+                                </li>
+                                <li><a class="dropdown-item" href="pages/bolsa_empleo.html#arte">Arte</a></li>
+                                <li><a class="dropdown-item" href="pages/bolsa_empleo.html#oficios">Oficios</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item"><a class="nav-link" href="pages/registrate.html">Registrate</a></li>
+                        <li class="nav-item"><a class="nav-link" href="pages/iniciar.html">Logueate</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <!-- Main -->
+    <main>
+        <!-- Contenido Principal -->
+        <section id="bienvenidos" class="area">
+            <div class="item1">
+                <h1 class="texto-ultra-destacado">Bienvenidxs a EmprenRed</h1>
+            </div>
+            <!-- Carrousel -->
+            <div class="item3">
+                <div id="carouselExample" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+                    <div class="carousel-inner" data-aos="flip-left">
+                        <div class="carousel-item active">
+                            <img src="assets/img/Carrousel/carrousel-1.jpg" class="d-block w-100"
+                                alt="Imagen 1 del carrusel">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/img/Carrousel/carrousel-2.jpg" class="d-block w-100"
+                                alt="Imagen 2 del carrusel">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/img/Carrousel/carrousel-3.jpg" class="d-block w-100"
+                                alt="Imagen 3 del carrusel">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/img/Carrousel/carrousel-4.jpg" class="d-block w-100"
+                                alt="Imagen 4 del carrusel">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item2">
+                <p class="letra-comun-right">¡Hola, emprendedorx estudiantil! EmprenRed nació como un sueño compartido
+                    entre estudiantes que entendemos los desafíos de equilibrar los estudios con el desarrollo
+                    profesional. Este es tu espacio seguro, donde encontrarás:
+                </p>
+                <ul>
+                    <li>Una comunidad activa que valora tu esfuerzo</li>
+                    <li>Herramientas para vender tus productos o servicios sin descuidar la cursada</li>
+                    <li>Oportunidades para crecer profesionalmente mientras sigues formándote</li>
+                    <li>Un mercado solidario donde tus creaciones tienen valor real</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Sobre el proyecto -->
+        <section id="sobre-proyecto" class="area">
+            <div class="item1">
+                <h2 class="texto-destacado item1">Sobre el Proyecto</h2>
+            </div>
+            <div class="item2">
+                <img src="assets/img/imagencentral.PNG" alt="Sobre el proyecto" class="imagen-destacada"
+                    data-aos="flip-left">
+            </div>
+            <div class="item3">
+                <p class="letra-comun-left">Comprando en este sitio estás ayudando a que un estudiante pueda
+                    terminar sus
+                    estudios. Juntxs es mucho más fácil emprender...</p>
+            </div>
+        </section>
+
+        <!-- Quienes Somos -->
+        <section id="quienes-somos" class="area">
+            <div class="item1">
+                <h2 class="texto-destacado">¿Quiénes Somos?</h2>
+            </div>
+            <div class="item2">
+                <img src="assets/img/home/LaTrinchera.JPG" alt="Quiénes somos" class="imagen-destacada"
+                    data-aos="flip-left">
+            </div>
+            <div class="item3">
+                <p class="letra-comun-left">Somos un conjunto de centros de estudiantes que nos unimos para hacer en
+                    conjunto este proyecto.</p>
+            </div>
+
+        </section>
+
+        <!-- Apoyos -->
+        <section id="apoyos" class="area">
+            <div class="item1">
+                <h2 class="texto-destacado">Apoyos</h2>
+            </div>
+            <div class="item2">
+                <img src="assets/img/home/apoyos/empresas.jpg" alt="Empresas que apoyan el proyecto"
+                    class="imagen-destacada" data-aos="flip-left">
+            </div>
+            <div class="item3">
+                <p class="letra-comun-left">Estas empresas y organismos apoyan este proyecto.</p>
+            </div>
+        </section>
+
+        <!-- Sección Contacto -->
+        <section id="contacto">
+            <h2 class="texto-destacado">Contacto</h2>
+            <form action="pages/construccion.html" method="post">
+
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="consulta">Sacate las dudas, escribinos por consultas:</label>
+                <textarea id="consulta" name="consulta" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="texto-footer">
+        <!-- <div class="bg-dark text-white p-3"> -->
+        <p>© 2025 EmprenRed Instagram @emprenred</p>
+        <!--  </div> -->
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            AOS.init();
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

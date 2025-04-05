@@ -1,0 +1,70 @@
+
+
+/* FONTS y CAJAS #################################################*/
+
+@use 'variables' as var;
+@use 'mixins' as *;
+
+.letra {
+    font-family: "Inter", sans-serif;
+} //clase abstracta
+
+.letra-comun-right {
+    @extend .letra;
+    color: var.$col-letra;
+    font-weight: bold;
+    text-align: right;
+    @include font-size(1.2); 
+}
+
+
+.letra-comun-left {
+    @extend .letra-comun-right;
+    text-align: left;
+}
+
+.texto-destacado {
+    @extend .letra;
+    // Colores
+    color: var.$col-sec-claro;
+    background-color: var.$col-ppal-oscuro;
+    // Texto
+    font-weight: 800;
+    text-shadow: 2px 3px 0 var.$col-sec-oscuro; // despx despy difunidao color 
+    border-radius: 10px;
+    text-align: center;
+     // Caja
+    margin: 20px 0; // lo separa de lo que tenga arriba
+    padding: 10px 20px;
+    box-shadow: 10px 10px 10 var.$col-sec-oscuro;    
+    @include font-size(1.3);
+}
+
+.texto-destacado:hover {
+    transform: scale(1.1);
+    background-color: var.$col-ppal-fuerte;
+    color: var.$col-sec-oscuro;
+    text-shadow: 2px 3px 0 var.$col-sec-claro; // despx despy difunido color 
+}
+
+.texto-ultra-destacado {
+    @extend .texto-destacado;
+    // Colores
+    background-color: var.$col-ppal-fuerte;
+    // Texto
+    font-weight: 800;    
+    @include font-size(1.5); 
+}
+
+
+.texto-ultra-destacado:hover {
+    transform: scale(1.2);
+}
+
+.texto-footer {
+    text-align: center;
+    background-color: var.$col-sec-oscuro;
+    color: var.$col-ppal-claro;
+    font-weight: bold;
+    @include font-size(1.1); 
+}
