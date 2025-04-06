@@ -10,16 +10,16 @@
   color: #333333;
   font-weight: bold;
   text-align: right;
-  font-size: 14.4px;
+  font-size: 13.2px;
 }
 @media (min-width: 768px) {
   .letra-comun-right, .letra-comun-left {
-    font-size: 16.8px;
+    font-size: 15.4px;
   }
 }
 @media (min-width: 1024px) {
   .letra-comun-right, .letra-comun-left {
-    font-size: 20.4px;
+    font-size: 18.7px;
   }
 }
 
@@ -35,56 +35,70 @@
   border-radius: 10px;
   text-align: center;
   margin: 20px auto;
-  padding: 20px 15px;
+  padding: 10px 15px;
   max-width: 90%;
   box-shadow: 10px 10px 10px rgb(2, 66, 108.5);
-  font-size: 15.6px;
+  font-size: 14.4px;
 }
 @media (min-width: 768px) {
   .texto-destacado, .texto-ultra-destacado {
-    font-size: 18.2px;
+    font-size: 16.8px;
   }
 }
 @media (min-width: 1024px) {
   .texto-destacado, .texto-ultra-destacado {
-    font-size: 22.1px;
+    font-size: 20.4px;
   }
 }
 .texto-destacado:hover, .texto-ultra-destacado:hover {
   background-color: hsl(21.9436619718, 146.3800904977%, 43.3333333333%);
   color: rgb(2, 66, 108.5);
   text-shadow: 2px 3px 0 rgb(27.9846153846, 161.8923076923, 250.8153846154);
-  font-size: 1.4rem;
-  padding: 22px 17px;
+  font-size: 15.6px;
+}
+@media (min-width: 768px) {
+  .texto-destacado:hover, .texto-ultra-destacado:hover {
+    font-size: 18.2px;
+  }
+}
+@media (min-width: 1024px) {
+  .texto-destacado:hover, .texto-ultra-destacado:hover {
+    font-size: 22.1px;
+  }
 }
 
 .texto-ultra-destacado {
-  background-color: hsl(21.9436619718, 146.3800904977%, 43.3333333333%);
+  margin: 20px auto;
+  color: rgb(27.9846153846, 161.8923076923, 250.8153846154);
+  background-color: #d95904;
   font-weight: 800;
-  font-size: 18px;
+  font-size: 15.6px;
 }
 @media (min-width: 768px) {
   .texto-ultra-destacado {
-    font-size: 21px;
+    font-size: 18.2px;
   }
 }
 @media (min-width: 1024px) {
   .texto-ultra-destacado {
-    font-size: 25.5px;
+    font-size: 22.1px;
   }
 }
 
 .texto-ultra-destacado:hover {
-  font-size: 19.2px;
+  color: rgb(27.9846153846, 161.8923076923, 250.8153846154);
+  background-color: rgb(108.5, 44.5, 2);
+  text-shadow: 2px 3px 0 hsl(21.9436619718, 146.3800904977%, 43.3333333333%);
+  font-size: 16.8px;
 }
 @media (min-width: 768px) {
   .texto-ultra-destacado:hover {
-    font-size: 22.4px;
+    font-size: 19.6px;
   }
 }
 @media (min-width: 1024px) {
   .texto-ultra-destacado:hover {
-    font-size: 27.2px;
+    font-size: 23.8px;
   }
 }
 
@@ -110,15 +124,20 @@
 body {
   padding-top: 10px !important;
   background-color: rgb(253.9538461538, 220.4769230769, 198.2461538462);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ocupa al menos el 100% del viewport */
+  margin: 0;
 }
 body main {
   margin-top: 70px;
   padding: 0 15px;
+  flex: 1; /* Hace que el contenido principal ocupe el espacio restante */
 }
 body footer {
-  margin-top: 20px;
   flex-shrink: 0;
   padding: 10px;
+  margin-top: auto; /* Fuerza al footer a quedarse abajo */
 }
 
 .imagen-destacada {
@@ -386,30 +405,91 @@ body footer {
 
 /* FORMULARIOS #################################################*/
 form {
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 20px;
+  max-width: 500px; /* Amplié el ancho máximo */
+  margin: 2rem auto; /* Más espacio vertical */
+  padding: 2rem; /* Más padding interno */
   background: #d95904;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 12px; /* Bordes más redondeados */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12); /* Sombra más pronunciada */
+}
+
+/* Contenedor para cada campo del formulario */
+.form-group {
+  margin-bottom: 1.5rem; /* Espacio entre campos */
+  position: relative;
 }
 
 form label {
-  font-size: 1.1rem;
-  font-weight: bold;
-  color: #333;
+  display: block; /* Asegura que ocupe su propia línea */
+  font-weight: 600; /* Peso intermedio */
+  color: rgb(2, 66, 108.5); /* Usa tu variable de color */
+  margin-bottom: 0.5rem; /* Espacio entre label y input */
+  font-size: 13.2px;
+}
+@media (min-width: 768px) {
+  form label {
+    font-size: 15.4px;
+  }
+}
+@media (min-width: 1024px) {
+  form label {
+    font-size: 18.7px;
+  }
 }
 
 form input,
-form textarea {
+form textarea,
+form select {
   width: 100%;
-  padding: 8px;
+  padding: 12px; /* Más espacio interno */
   border: 1px solid rgb(2, 66, 108.5);
-  border-radius: 4px;
+  border-radius: 6px; /* Bordes más redondeados */
+  transition: all 0.3s ease; /* Transición suave */
+  background-color: rgba(255, 255, 255, 0.9); /* Fondo ligeramente blanco */
+  font-size: 13.2px;
+}
+@media (min-width: 768px) {
+  form input,
+  form textarea,
+  form select {
+    font-size: 15.4px;
+  }
+}
+@media (min-width: 1024px) {
+  form input,
+  form textarea,
+  form select {
+    font-size: 18.7px;
+  }
+}
+form input:focus,
+form textarea:focus,
+form select:focus {
+  outline: none;
+  border-color: hsl(21.9436619718, 146.3800904977%, 43.3333333333%); /* Color al enfocar */
+  box-shadow: 0 0 0 3px hsla(21.9436619718, 146.3800904977%, 43.3333333333%, 0.2); /* Efecto de foco */
+}
+
+/* Espaciado específico para textareas */
+form textarea {
+  min-height: 120px; /* Altura mínima */
+  resize: vertical; /* Permite redimensionar solo vertical */
+}
+
+/* Espacio adicional para checkboxes/radios */
+.form-check {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+}
+.form-check input[type=checkbox],
+.form-check input[type=radio] {
+  width: auto;
+  margin-right: 0.5rem;
 }
 
 /***************** BOTONES *******************************************************************/
-button {
+.botones {
   width: 100%;
   padding: 12px 10px;
   background: rgb(2, 66, 108.5);
@@ -418,18 +498,297 @@ button {
   font-weight: bold;
   border: none;
   border-radius: 6px;
+  margin-top: 20px;
   cursor: pointer;
   transition: all 0.3s ease; /* Transición suave para todos los cambios */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil para profundidad */
 }
-button:hover {
+.botones:hover {
   background: rgb(27.9846153846, 161.8923076923, 250.8153846154);
   transform: translateY(-1px); /* Levanta ligeramente el botón */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada al hover */
 }
-button:active {
+.botones:active {
   transform: translateY(1px); /* Baja el botón 1px (como si se hundiera) */
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1); /* Sombra casi plana */
+}
+
+/* JUEGOS ANIMATE #################################################*/
+/* Estilos específicos para el contenedor de la imagen */
+#image-game-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 1000;
+  padding-top: 70px;
+  width: 80%;
+  height: 70%;
+  background-image: radial-gradient(circle, #d95904, rgb(27.9846153846, 161.8923076923, 250.8153846154), rgb(251.3384615385, 134.1692307692, 56.3615384615));
+  /* Ajuste para el navbar fijo */
+}
+
+/* Estilos específicos para la imagen */
+#image-game {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  transition: transform 0.3s ease;
+  /* Transición suave para transformaciones */
+}
+
+#image-game:hover {
+  transform: scale(2);
+  /* Agranda la imagen un 10% al pasar el mouse */
+  opacity: 0.5;
+}
+
+/* ## Clases simples con Transform */
+/* Clase para mover la imagen (translate) */
+.translate {
+  transform: translate(50px, 50px);
+  /* Mueve la imagen 50px a la derecha y 50px hacia abajo */
+}
+
+/* Clase para rotar la imagen (rotate) */
+.rotate {
+  transform: rotate(45deg);
+  /* Rota la imagen 45 grados */
+}
+
+/* Clase para escalar la imagen (scale) */
+.scale {
+  transform: scale(1.5);
+  /* Escala la imagen al 150% */
+}
+
+/* Clase para inclinar la imagen (skew) */
+.skew {
+  transform: skew(20deg, 10deg);
+  /* Inclina la imagen 20 grados en X y 10 grados en Y */
+}
+
+/* ### Animaciones combinadas con keyframe */
+@keyframes spinScale {
+  0% {
+    transform: rotate(0) scale(1);
+  }
+  50% {
+    transform: rotate(180deg) scale(2.5);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+.spin-scale {
+  animation: spinScale 2s 2;
+  /* 2 segundos / 2 veces */
+}
+
+@keyframes zigzagMove {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(30px);
+  }
+  50% {
+    transform: translateX(-30px);
+  }
+  75% {
+    transform: translateX(30px);
+  }
+}
+.zigzag {
+  animation: zigzagMove 1.5s 2;
+}
+
+@keyframes heartbeat {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.3);
+  }
+}
+.heartbeat {
+  animation: heartbeat 1s 2;
+}
+
+@keyframes spiral {
+  0% {
+    transform: rotate(0) translate(0, 0);
+  }
+  25% {
+    transform: rotate(90deg) translate(20px, 20px);
+  }
+  50% {
+    transform: rotate(180deg) translate(40px, 0);
+  }
+  75% {
+    transform: rotate(270deg) translate(20px, -20px);
+  }
+  100% {
+    transform: rotate(360deg) translate(0, 0);
+  }
+}
+.spiral {
+  animation: spiral 2s 2;
+}
+
+@keyframes diagonalShake {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(5px, 5px);
+  }
+  50% {
+    transform: translate(-5px, -5px);
+  }
+  75% {
+    transform: translate(5px, -5px);
+  }
+}
+.diagonal-shake {
+  animation: diagonalShake 1s 2;
+}
+
+.combinado {
+  animation: combinado 5s 2;
+}
+
+@keyframes combinado {
+  10% {
+    transform: rotate(90deg) translate(20px, 20px);
+  }
+  25% {
+    transform: scale(4);
+  }
+  50% {
+    transform: translate(-50px, -20px);
+  }
+  70% {
+    transform: rotate(180deg) translate(10px, 10px) scale(1.1);
+  }
+  75% {
+    transform: rotate(280deg) translate(0, 0);
+  }
+  100% {
+    transform: rotate(180deg) translate(0, 0);
+  }
+}
+/* ### Personalización de duración y delay para animaciones de Animate.css */
+.animate__animated.animate__bounce {
+  animation-duration: 3s;
+  /* Duración de la animación */
+  animation-delay: 5ms;
+  /* Retraso antes de que comience la animación */
+}
+
+.animate__animated.animate__fadeIn {
+  animation-duration: 3s;
+  animation-delay: 0.5s;
+}
+
+.animate__animated.animate__flip {
+  animation-duration: 3s;
+  animation-delay: 0.2s;
+}
+
+.animate__animated.animate__shakeX {
+  animation-duration: 2s;
+  animation-delay: 0.1s;
+}
+
+.animate__animated.animate__rubberBand {
+  animation-duration: 3s;
+  animation-delay: 0.3s;
+}
+
+/********************** Estilos para la sección con AOS */
+.aos-section {
+  margin-top: 500px;
+  /* Espacio para forzar el scroll */
+  text-align: center;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+}
+
+/* Agrega un margen superior a la sección AOS */
+.aos-section {
+  margin-top: 100px;
+  /* Ajusta este valor según la altura del navbar */
+  text-align: center;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+}
+
+/* MENÚ HORIZONTAL #################################################*/
+.navbar.bg-dark {
+  background-color: rgb(2, 66, 108.5) !important;
+  font-size: 1.1rem;
+}
+
+.nav-link {
+  font-weight: 200;
+  font-size: inherit;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease;
+}
+.nav-link:hover {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.nav-link.active {
+  background-color: hsl(21.9436619718, 146.3800904977%, 43.3333333333%);
+  color: rgb(27.9846153846, 161.8923076923, 250.8153846154);
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.navbar-brand {
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.loguito {
+  width: 45px;
+  height: 45px;
+}
+
+.navbar.fixed-top {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}
+
+/* Estilos para el submenú dropdown */
+.dropdown-menu {
+  font-size: 1rem;
+  background-color: #0484d9;
+  /* Mismo color que el navbar */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  /* Borde sutil */
+}
+.dropdown-menu .dropdown-item {
+  color: white;
+  /* Color del texto */
+  padding: 0.5rem 1.5rem;
+}
+.dropdown-menu .dropdown-item:hover, .dropdown-menu .dropdown-item:focus {
+  background-color: hsl(21.9436619718, 146.3800904977%, 43.3333333333%);
+  /* Color al hacer hover */
+  color: rgb(2, 66, 108.5);
+  font-weight: bolder;
 }
 
 /* Pendientes */

@@ -1,53 +1,67 @@
 @use 'variables' as var;
+@use 'mixins' as *;
 
 /* FORMULARIOS #################################################*/
 form {
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 20px;
+    max-width: 500px; /* Amplié el ancho máximo */
+    margin: 2rem auto; /* Más espacio vertical */
+    padding: 2rem; /* Más padding interno */
     background: var.$col-ppal;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 12px; /* Bordes más redondeados */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12); /* Sombra más pronunciada */
+}
+
+/* Contenedor para cada campo del formulario */
+.form-group {
+    margin-bottom: 1.5rem; /* Espacio entre campos */
+    position: relative;
 }
 
 form label {
-    font-size: 1.1rem;
-    font-weight: bold;
-    color: #333;
+    display: block; /* Asegura que ocupe su propia línea */ 
+    font-weight: 600; /* Peso intermedio */
+    color: var.$col-sec-oscuro; /* Usa tu variable de color */
+    margin-bottom: 0.5rem; /* Espacio entre label y input */
+    @include font-size(1.1);  
 }
 
 form input,
-form textarea {
+form textarea,
+form select {
     width: 100%;
-    padding: 8px;
+    padding: 12px; /* Más espacio interno */
     border: 1px solid var.$col-sec-oscuro;
-    border-radius: 4px;
+    border-radius: 6px; /* Bordes más redondeados */
+    transition: all 0.3s ease; /* Transición suave */
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo ligeramente blanco */
+    @include font-size(1.1);  
+
+    &:focus {
+        outline: none;
+        border-color: var.$col-ppal-fuerte; /* Color al enfocar */
+        box-shadow: 0 0 0 3px rgba(var.$col-ppal-fuerte, 0.2); /* Efecto de foco */
+    }
 }
 
-/***************** BOTONES *******************************************************************/
-
-button {
-    width: 100%;
-    padding: 12px 10px; 
-    background: var.$col-sec-oscuro;
-    color: var.$col-ppal-claro;
-    font-size: 1.1rem;
-    font-weight: bold; 
-    border: none;
-    border-radius: 6px; 
-    cursor: pointer;
-    transition: all 0.3s ease; /* Transición suave para todos los cambios */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil para profundidad */
-
-    &:hover {
-        background: var.$col-sec-claro;
-        transform: translateY(-1px); /* Levanta ligeramente el botón */
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada al hover */
-    }
-
-    &:active {
-        transform: translateY(1px);  /* Baja el botón 1px (como si se hundiera) */
-        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1); /* Sombra casi plana */
-    }
-
+/* Espaciado específico para textareas */
+form textarea {
+    min-height: 120px; /* Altura mínima */
+    resize: vertical; /* Permite redimensionar solo vertical */
 }
+
+
+
+/* Espacio adicional para checkboxes/radios */
+.form-check {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+
+    input[type="checkbox"],
+    input[type="radio"] {
+        width: auto;
+        margin-right: 0.5rem;
+    }
+}
+
+

@@ -1,0 +1,70 @@
+@use 'variables' as var;
+
+/* MENÚ HORIZONTAL #################################################*/
+
+.navbar.bg-dark {
+    background-color: var.$col-sec-oscuro !important;
+    font-size: 1.1rem;
+}
+
+.nav-link {
+    font-weight: 200;
+    font-size: inherit;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+
+    &:hover {
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+
+    &.active {
+        background-color: var.$col-ppal-fuerte;
+        color: var.$col-sec-claro;
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+}
+
+.navbar-brand {
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.loguito {
+    width: 45px;
+    height: 45px;
+}
+
+.navbar.fixed-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+
+/* Estilos para el submenú dropdown */
+.dropdown-menu {
+    font-size: 1rem;
+    background-color: var.$col-sec;
+    /* Mismo color que el navbar */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    /* Borde sutil */
+
+    .dropdown-item {
+        color: white;
+        /* Color del texto */
+        padding: 0.5rem 1.5rem;
+
+        &:hover,
+        &:focus {
+            background-color: var.$col-ppal-fuerte;
+            /* Color al hacer hover */
+            color: var.$col-sec-oscuro;
+            font-weight: bolder;
+        }
+    }
+}

@@ -1,0 +1,252 @@
+@use 'variables' as var;
+
+/* JUEGOS ANIMATE #################################################*/
+
+
+/* Estilos específicos para el contenedor de la imagen */
+#image-game-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 1000;
+    padding-top: 70px;
+    width: 80%;
+    height: 70%;
+    background-image: radial-gradient(circle, var.$col-ppal, var.$col-sec-claro, var.$col-ppal-medio );
+    /* Ajuste para el navbar fijo */
+}
+
+/* Estilos específicos para la imagen */
+#image-game {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    transition: transform 0.3s ease;
+    /* Transición suave para transformaciones */
+}
+
+#image-game:hover {
+    transform: scale(2);
+    /* Agranda la imagen un 10% al pasar el mouse */
+    opacity: 0.5;
+}
+
+/* ## Clases simples con Transform */
+
+/* Clase para mover la imagen (translate) */
+.translate {
+    transform: translate(50px, 50px);
+    /* Mueve la imagen 50px a la derecha y 50px hacia abajo */
+}
+
+/* Clase para rotar la imagen (rotate) */
+.rotate {
+    transform: rotate(45deg);
+    /* Rota la imagen 45 grados */
+}
+
+/* Clase para escalar la imagen (scale) */
+.scale {
+    transform: scale(1.5);
+    /* Escala la imagen al 150% */
+}
+
+/* Clase para inclinar la imagen (skew) */
+.skew {
+    transform: skew(20deg, 10deg);
+    /* Inclina la imagen 20 grados en X y 10 grados en Y */
+}
+
+/* ### Animaciones combinadas con keyframe */
+
+@keyframes spinScale {
+    0% {
+        transform: rotate(0) scale(1);
+    }
+
+    50% {
+        transform: rotate(180deg) scale(2.5);
+    }
+
+    100% {
+        transform: rotate(360deg) scale(1);
+    }
+}
+
+.spin-scale {
+    animation: spinScale 2s 2;
+    /* 2 segundos / 2 veces */
+}
+
+@keyframes zigzagMove {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(30px);
+    }
+
+    50% {
+        transform: translateX(-30px);
+    }
+
+    75% {
+        transform: translateX(30px);
+    }
+}
+
+.zigzag {
+    animation: zigzagMove 1.5s 2;
+}
+
+@keyframes heartbeat {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.3);
+    }
+}
+
+.heartbeat {
+    animation: heartbeat 1s 2;
+}
+
+@keyframes spiral {
+    0% {
+        transform: rotate(0) translate(0, 0);
+    }
+
+    25% {
+        transform: rotate(90deg) translate(20px, 20px);
+    }
+
+    50% {
+        transform: rotate(180deg) translate(40px, 0);
+    }
+
+    75% {
+        transform: rotate(270deg) translate(20px, -20px);
+    }
+
+    100% {
+        transform: rotate(360deg) translate(0, 0);
+    }
+}
+
+.spiral {
+    animation: spiral 2s 2;
+}
+
+@keyframes diagonalShake {
+
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+
+    25% {
+        transform: translate(5px, 5px);
+    }
+
+    50% {
+        transform: translate(-5px, -5px);
+    }
+
+    75% {
+        transform: translate(5px, -5px);
+    }
+}
+
+.diagonal-shake {
+    animation: diagonalShake 1s 2;
+}
+
+.combinado {
+    animation: combinado 5s 2;
+}
+
+
+@keyframes combinado {
+    10% {
+        transform: rotate(90deg) translate(20px, 20px);
+    }
+
+    25% {
+        transform: scale(4);
+    }
+
+    50% {
+        transform: translate(-50px, -20px);
+    }
+
+    70% {
+        transform: rotate(180deg) translate(10px, 10px) scale(1.1);
+    }
+
+    75% {
+        transform: rotate(280deg) translate(0, 0);
+    }
+
+    100% {
+        transform: rotate(180deg) translate(0, 0);
+    }
+
+}
+
+/* ### Personalización de duración y delay para animaciones de Animate.css */
+.animate__animated.animate__bounce {
+    animation-duration: 3s;
+    /* Duración de la animación */
+    animation-delay: 5ms;
+    /* Retraso antes de que comience la animación */
+}
+
+.animate__animated.animate__fadeIn {
+    animation-duration: 3s;
+    animation-delay: 0.5s;
+}
+
+.animate__animated.animate__flip {
+    animation-duration: 3s;
+    animation-delay: 0.2s;
+}
+
+.animate__animated.animate__shakeX {
+    animation-duration: 2s;
+    animation-delay: 0.1s;
+}
+
+.animate__animated.animate__rubberBand {
+    animation-duration: 3s;
+    animation-delay: 0.3s;
+}
+
+/********************** Estilos para la sección con AOS */
+.aos-section {
+    margin-top: 500px;
+    /* Espacio para forzar el scroll */
+    text-align: center;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+}
+
+/* Agrega un margen superior a la sección AOS */
+.aos-section {
+    margin-top: 100px;
+    /* Ajusta este valor según la altura del navbar */
+    text-align: center;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+}

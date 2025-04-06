@@ -13,36 +13,96 @@
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="../index.html">
-                    <img src="../assets/img/loguito.gif" alt="Logo" width="35" height="35"
-                        class="d-inline-block align-text-medium">
-                    EmprenRed |
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+        <!-- Bloque Menú -->
+        <section>
+            <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="../assets/img/loguito.gif" alt="Logo EmprenRed" width="35" height="35"
+                            class="d-inline-block align-text-medium">
+                        EmprenRed |
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
 
-                <div id="navbarNav" class="collapse navbar-collapse">
-                    <ul class="navbar-nav">
-                        <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link active" href="servicios.html">Servicios</a></li>
-                        <li class="nav-item"><a class="nav-link" href="catalogo.html">Catálogo</a></li>
-                        <li class="nav-item"><a class="nav-link" href="tips.html">Tips</a></li>
-                        <li class="nav-item"><a class="nav-link" href="bolsa_empleo.html">Empleos</a></li>
-                        <li class="nav-item"><a class="nav-link" href="registrate.html">Registrate</a></li>
-                        <li class="nav-item"><a class="nav-link" href="iniciar.html">Logueate</a></li>
-                    </ul>
+                    <div id="navbarNav" class="collapse navbar-collapse">
+                        <ul class="navbar-nav">
+                            <!-- Menú Home  -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="../index.html" id="navbarDropdown"
+                                    role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Home
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <!-- Opciones del menú desplegable -->
+                                    <li><a class="dropdown-item" href="../index.html#bienvenidos">Bienvenidxs</a></li>
+                                    <li><a class="dropdown-item" href="../index.html#sobre-proyecto">Sobre el
+                                            proyecto</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="../index.html#quienes-somos">¿Quiénes somos?</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="../index.html#apoyos">Apoyos</a></li>
+                                    <li><a class="dropdown-item" href="../index.html#contacto">Contactanos</a></li>
+                                </ul>
+                            </li>
+
+                            <!-- Servicios  -->
+                            <li class="nav-item"><a class="nav-link active" href="servicios.html">Servicios</a></li>
+
+                            <!-- Catálogo  -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="catalogo.html" id="navbarDropdown"
+                                    role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Catálogo
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <!-- Calzado -->
+                                    <li><a class="dropdown-item" href="catalogo.html#item-1">Calzado</a></li>
+                                    <!-- Clases -->
+                                    <li><a class="dropdown-item" href="catalogo.html#item-2">Clases</a></li>
+                                    <!-- Comidas -->
+                                    <li><a class="dropdown-item" href="catalogo.html#item-3">Comidas</a></li>
+                                </ul>
+                            </li>
+
+                            <!-- Menú Tips -->
+                            <li class="nav-item"><a class="nav-link" href="tips.html">Tips</a></li>
+
+                            <!-- Menú Animate -->
+                            <li class="nav-item"><a class="nav-link" href="animate.html">Animate</a></li>
+
+                            <!-- Menú Empleos  -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="bolsa_empleo.html" id="navbarDropdown"
+                                    role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Empleos
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <!-- Opciones del menú desplegable -->
+                                    <li><a class="dropdown-item" href="bolsa_empleo.html#tecnologia">Tecnología</a></li>
+                                    <li><a class="dropdown-item" href="bolsa_empleo.html#arte">Arte</a></li>
+                                    <li><a class="dropdown-item" href="bolsa_empleo.html#oficios">Oficios</a></li>
+                                </ul>
+                            </li>
+
+                            <!-- Menú Registrate  -->
+                            <li class="nav-item"><a class="nav-link" href="registrate.html">Registrate</a></li>
+
+                            <!-- Menú Iniciar  -->
+                            <li class="nav-item"><a class="nav-link" href="iniciar.html">Logueate</a></li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-        </nav>
+            </nav>
+        </section>
+
     </header>
 
     <main>
         <section class="titulo">
-                <h1 class="texto-ultra-destacado">Estos son los servicios que ofrecemos:</h1>
-                <br>
+            <h1 class="texto-ultra-destacado">Estos son los servicios que ofrecemos:</h1>
+            <br>
         </section>
         <section>
             <div class="accordion">
@@ -130,10 +190,8 @@
     </main>
 
     <!-- Footer -->
-    <footer>
-        <div class="bg-dark text-white p-3">
-            <p class="text-center">© 2025 Emprenred Instagram @emprenred</p>
-        </div>
+    <footer class="texto-footer">
+        <p>© 2025 EmprenRed Instagram @emprenred</p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
