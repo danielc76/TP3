@@ -1,4 +1,5 @@
 @use 'variables' as var;
+@use "sass:color"; // Importa el módulo de colores de Sass
 
 .item1 {
     grid-area: item1;
@@ -7,15 +8,19 @@
 .item2 {
     grid-area: item2;
     background: var.$col-ppal-medio;
-    padding: 5%;    
+    padding: 5%;
+    display: flex;
+    align-items: center;
+    align-content: center;
 }
+
+
 
 .item3 {
     grid-area: item3;
     background: var.$col-ppal-medio;
     padding: 5%;
 }
-
 
 .area {
     display: grid;
@@ -27,12 +32,121 @@
         "item3";
 }
 
-.area-destacada{
-    @extend .area;
+.area-destacada {
+    display: grid;
+    grid-template-columns: 1;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+        "item1"
+        "item2-carrousel"
+
+        "item3";
+
 }
 
-  // Luego las reglas anidadas
-  @media (min-width: 768px) {
+
+.item2-carrousel {
+    grid-area: item2-carrousel;
+    background: var.$col-ppal-medio;
+    display: flex;
+
+    #carousel-home {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+/* MENÚ HORIZONTAL #################################################*/
+
+.navbar.bg-dark {
+    background-color: var.$col-sec-oscuro !important;
+    font-size: 1.1rem;
+}
+
+.nav-link {
+    font-weight: 200;
+    font-size: inherit;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+
+    &:hover {
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+
+    &.active {
+        background-color: var.$col-ppal-fuerte;
+        color: var.$col-sec-claro;
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+}
+
+.navbar-brand {
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.loguito {
+    width: 45px;
+    height: 45px;
+}
+
+.navbar.fixed-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+
+/* Estilos para el submenú dropdown */
+.dropdown-menu {
+    font-size: 1rem;
+    background-color: var.$col-sec;
+    /* Mismo color que el navbar */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    /* Borde sutil */
+
+    .dropdown-item {
+        color: white;
+        /* Color del texto */
+        padding: 0.5rem 1.5rem;
+
+        &:hover,
+        &:focus {
+            background-color: var.$col-ppal-fuerte;
+            /* Color al hacer hover */
+            color: var.$col-sec-oscuro;
+            font-weight: bolder;
+        }
+    }
+}
+
+/* Versión móvil */
+@media (max-width: 767.98px) {
+    .navbar-collapse {
+        padding: 1rem 0;
+        background-color: var.$col-sec-oscuro;
+    }
+
+    .nav-link {
+        padding: 0.75rem 1.25rem;
+    }
+
+    /* Ajustes específicos para dropdown en móvil si es necesario */
+    .dropdown-menu {
+        margin-left: 1rem;
+        background-color: color.scale(var.$col-sec-oscuro, $lightness: -5%);
+    }
+}
+
+/*****************************************************/
+
+// Luego las reglas anidadas
+@media (min-width: 768px) {
     .area {
         display: grid;
         grid-template-columns: 2fr 3fr;
@@ -41,9 +155,18 @@
             "item1 item1"
             "item2 item3";
     }
-  }
-  
-  @media (min-width: 1024px) {
+
+    .area-destacada {
+        display: grid;
+        grid-template-columns: 2fr fr;
+        grid-template-rows: auto auto;
+        grid-template-areas:
+            "item1 item1"
+            "item3 item2-carrousel";
+    }
+}
+
+@media (min-width: 1024px) {
     .area {
         display: grid;
         grid-template-columns: 5% 2fr 3fr 5%;
@@ -52,7 +175,65 @@
             "item1 item1 item1 item1"
             ". item2 item3 .";
     }
-  }
+
+    .area-destacada {
+        display: grid;
+        grid-template-columns: 5% 2fr 3fr 5%;
+        grid-template-rows: auto auto;
+        grid-template-areas:
+            "item1 item1 item1 item1"
+            ". item3 item2-carrousel .";
+    }
+
+}
+
+/* ACORDEÓN #################################################*/
+
+.accordion {
+    width: 90%;
+    margin: 10px auto;
+    /* Centrar el acordeón */
+}
+
+.accordion-item {
+    width: 95%;
+}
+
+.accordion-body {
+    min-height: 150px;
+    /* Altura mínima para contenido */
+    overflow: hidden;
+    /* Opcional: maneja contenido muy largo */
+}
 
 
+/* GRID DE TARJETAS */
+.grid-tarjetas {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Columnas responsivas */
+    gap: 30px; /* Espacio entre tarjetas */
+    padding: 20px;
+    max-width: 1400px; /* Ancho máximo del grid */
+    margin: 0 auto; /* Centrado horizontal */
+}
 
+/* Sobreescribe estilos de Bootstrap para las cards */
+.grid-tarjetas .card {
+    width: 100%; /* Asegura que tome el ancho del grid */
+    border: none; /* Elimina borde por defecto */
+    border-radius: 12px; /* Bordes más redondeados */
+    overflow: hidden; /* Para que las imágenes no sobresalgan */
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+
+    &:hover {
+        transform: translateY(-5px); /* Efecto "levitar" */
+        box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+    }
+}
+
+/* Ajustes para imágenes dentro de las cards */
+.grid-tarjetas .card-img-top {
+    height: 200px; /* Altura fija para imágenes */
+    object-fit: cover; /* Recorta la imagen manteniendo proporciones */
+}

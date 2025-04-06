@@ -12,20 +12,61 @@
 }
 
 /* CARROUSEL #################################################*/
+
 .carousel-inner {
-    max-height: 600px;
+    position: relative;
+    width: 100%;
     overflow: hidden;
+    aspect-ratio: 16/9; /* Proporción recomendada (ajusta según tus imágenes) */
 }
 
-.carousel-item img {
-    width: 100%;  // Ocupa el 100% del ancho del contenedor 
-    height: auto;    // Mantiene la proporción 
-    max-height: 600px; // Altura máxima para el carrusel 
-    object-fit: cover; // Asegura que la imagen cubra el espacio sin distorsionarse 
+.carousel-item {
+    width: 100%;
+    height: 100%;
+    
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain; /* Cambiado de 'cover' a 'contain' para ver imagen completa */
+        object-position: center;
+    }
 }
 
-.carousel {
-    max-width: 720px;
+#carrousel-home {
+    width: 100%;
     margin: 0 auto;
-    overflow: hidden;
+}
+
+/* Contenedor del carrusel */
+.item2-carrousel {
+    grid-area: item2-carrousel; /* Asegúrate que coincida con tu grid */
+    display: flex;
+    align-items: center;
+    padding: 0;
+    width: 100%;
+    
+    .carousel {
+        width: 100%;
+    }
+}
+
+/* Media Queries para ajustes específicos */
+@media (max-width: 767px) {
+    .carousel-inner {
+        aspect-ratio: 1/1; /* Proporción más cuadrada para móviles */
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .carousel-inner {
+        aspect-ratio: 16/9; /* Proporción widescreen para tablet */
+        max-height: 60vh; /* Altura máxima relativa */
+    }
+}
+
+@media (min-width: 1024px) {
+    .carousel-inner {
+        aspect-ratio: 16/9;
+        max-height: 70vh; /* Altura máxima relativa */
+    }
 }

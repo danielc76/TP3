@@ -4,9 +4,9 @@
 /***** TIPOGRAFIAS ************/
 
 $font-sizes: (
-  mobile: 14px,
-  tablet: 18px,
-  desktop: 20px
+  mobile: 12px,
+  tablet: 14px,
+  desktop: 17px
 );
 
 @mixin font-size($multiplier: 1) {

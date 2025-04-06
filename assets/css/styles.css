@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /***** COLORES ************/
 /* FONTS y CAJAS #################################################*/
 /***** TIPOGRAFIAS ************/
@@ -9,16 +10,16 @@
   color: #333333;
   font-weight: bold;
   text-align: right;
-  font-size: 16.8px;
+  font-size: 14.4px;
 }
 @media (min-width: 768px) {
   .letra-comun-right, .letra-comun-left {
-    font-size: 21.6px;
+    font-size: 16.8px;
   }
 }
 @media (min-width: 1024px) {
   .letra-comun-right, .letra-comun-left {
-    font-size: 24px;
+    font-size: 20.4px;
   }
 }
 
@@ -33,47 +34,58 @@
   text-shadow: 2px 3px 0 rgb(2, 66, 108.5);
   border-radius: 10px;
   text-align: center;
-  margin: 20px 0;
-  padding: 10px 20px;
-  box-shadow: 10px 10px 10 rgb(2, 66, 108.5);
-  font-size: 18.2px;
+  margin: 20px auto;
+  padding: 20px 15px;
+  max-width: 90%;
+  box-shadow: 10px 10px 10px rgb(2, 66, 108.5);
+  font-size: 15.6px;
 }
 @media (min-width: 768px) {
   .texto-destacado, .texto-ultra-destacado {
-    font-size: 23.4px;
+    font-size: 18.2px;
   }
 }
 @media (min-width: 1024px) {
   .texto-destacado, .texto-ultra-destacado {
-    font-size: 26px;
+    font-size: 22.1px;
   }
 }
-
 .texto-destacado:hover, .texto-ultra-destacado:hover {
-  transform: scale(1.1);
   background-color: hsl(21.9436619718, 146.3800904977%, 43.3333333333%);
   color: rgb(2, 66, 108.5);
   text-shadow: 2px 3px 0 rgb(27.9846153846, 161.8923076923, 250.8153846154);
+  font-size: 1.4rem;
+  padding: 22px 17px;
 }
 
 .texto-ultra-destacado {
   background-color: hsl(21.9436619718, 146.3800904977%, 43.3333333333%);
   font-weight: 800;
-  font-size: 21px;
+  font-size: 18px;
 }
 @media (min-width: 768px) {
   .texto-ultra-destacado {
-    font-size: 27px;
+    font-size: 21px;
   }
 }
 @media (min-width: 1024px) {
   .texto-ultra-destacado {
-    font-size: 30px;
+    font-size: 25.5px;
   }
 }
 
 .texto-ultra-destacado:hover {
-  transform: scale(1.2);
+  font-size: 19.2px;
+}
+@media (min-width: 768px) {
+  .texto-ultra-destacado:hover {
+    font-size: 22.4px;
+  }
+}
+@media (min-width: 1024px) {
+  .texto-ultra-destacado:hover {
+    font-size: 27.2px;
+  }
 }
 
 .texto-footer {
@@ -81,16 +93,16 @@
   background-color: rgb(2, 66, 108.5);
   color: rgb(253.9538461538, 220.4769230769, 198.2461538462);
   font-weight: bold;
-  font-size: 15.4px;
+  font-size: 13.2px;
 }
 @media (min-width: 768px) {
   .texto-footer {
-    font-size: 19.8px;
+    font-size: 15.4px;
   }
 }
 @media (min-width: 1024px) {
   .texto-footer {
-    font-size: 22px;
+    font-size: 18.7px;
   }
 }
 
@@ -122,23 +134,58 @@ body footer {
 
 /* CARROUSEL #################################################*/
 .carousel-inner {
-  max-height: 600px;
+  position: relative;
+  width: 100%;
   overflow: hidden;
+  aspect-ratio: 16/9; /* Proporción recomendada (ajusta según tus imágenes) */
 }
 
+.carousel-item {
+  width: 100%;
+  height: 100%;
+}
 .carousel-item img {
   width: 100%;
-  height: auto;
-  max-height: 600px;
-  object-fit: cover;
+  height: 100%;
+  object-fit: contain; /* Cambiado de 'cover' a 'contain' para ver imagen completa */
+  object-position: center;
 }
 
-.carousel {
-  max-width: 720px;
+#carrousel-home {
+  width: 100%;
   margin: 0 auto;
-  overflow: hidden;
 }
 
+/* Contenedor del carrusel */
+.item2-carrousel {
+  grid-area: item2-carrousel; /* Asegúrate que coincida con tu grid */
+  display: flex;
+  align-items: center;
+  padding: 0;
+  width: 100%;
+}
+.item2-carrousel .carousel {
+  width: 100%;
+}
+
+/* Media Queries para ajustes específicos */
+@media (max-width: 767px) {
+  .carousel-inner {
+    aspect-ratio: 1/1; /* Proporción más cuadrada para móviles */
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .carousel-inner {
+    aspect-ratio: 16/9; /* Proporción widescreen para tablet */
+    max-height: 60vh; /* Altura máxima relativa */
+  }
+}
+@media (min-width: 1024px) {
+  .carousel-inner {
+    aspect-ratio: 16/9;
+    max-height: 70vh; /* Altura máxima relativa */
+  }
+}
 .item1 {
   grid-area: item1;
 }
@@ -147,6 +194,9 @@ body footer {
   grid-area: item2;
   background: rgb(251.3384615385, 134.1692307692, 56.3615384615);
   padding: 5%;
+  display: flex;
+  align-items: center;
+  align-content: center;
 }
 
 .item3 {
@@ -155,28 +205,233 @@ body footer {
   padding: 5%;
 }
 
-.area, .area-destacada {
+.area {
   display: grid;
   grid-template-columns: 1;
   grid-template-rows: auto auto auto;
   grid-template-areas: "item1" "item2" "item3";
 }
 
+.area-destacada {
+  display: grid;
+  grid-template-columns: 1;
+  grid-template-rows: auto auto auto;
+  grid-template-areas: "item1" "item2-carrousel" "item3";
+}
+
+.item2-carrousel {
+  grid-area: item2-carrousel;
+  background: rgb(251.3384615385, 134.1692307692, 56.3615384615);
+  display: flex;
+}
+.item2-carrousel #carousel-home {
+  width: 100%;
+  height: 100%;
+}
+
+/* MENÚ HORIZONTAL #################################################*/
+.navbar.bg-dark {
+  background-color: rgb(2, 66, 108.5) !important;
+  font-size: 1.1rem;
+}
+
+.nav-link {
+  font-weight: 200;
+  font-size: inherit;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease;
+}
+.nav-link:hover {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.nav-link.active {
+  background-color: hsl(21.9436619718, 146.3800904977%, 43.3333333333%);
+  color: rgb(27.9846153846, 161.8923076923, 250.8153846154);
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.navbar-brand {
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.loguito {
+  width: 45px;
+  height: 45px;
+}
+
+.navbar.fixed-top {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}
+
+/* Estilos para el submenú dropdown */
+.dropdown-menu {
+  font-size: 1rem;
+  background-color: #0484d9;
+  /* Mismo color que el navbar */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  /* Borde sutil */
+}
+.dropdown-menu .dropdown-item {
+  color: white;
+  /* Color del texto */
+  padding: 0.5rem 1.5rem;
+}
+.dropdown-menu .dropdown-item:hover, .dropdown-menu .dropdown-item:focus {
+  background-color: hsl(21.9436619718, 146.3800904977%, 43.3333333333%);
+  /* Color al hacer hover */
+  color: rgb(2, 66, 108.5);
+  font-weight: bolder;
+}
+
+/* Versión móvil */
+@media (max-width: 767.98px) {
+  .navbar-collapse {
+    padding: 1rem 0;
+    background-color: rgb(2, 66, 108.5);
+  }
+  .nav-link {
+    padding: 0.75rem 1.25rem;
+  }
+  /* Ajustes específicos para dropdown en móvil si es necesario */
+  .dropdown-menu {
+    margin-left: 1rem;
+    background-color: rgb(1.9, 62.7, 103.075);
+  }
+}
+/*****************************************************/
 @media (min-width: 768px) {
-  .area, .area-destacada {
+  .area {
     display: grid;
     grid-template-columns: 2fr 3fr;
     grid-template-rows: auto auto;
     grid-template-areas: "item1 item1" "item2 item3";
   }
+  .area-destacada {
+    display: grid;
+    grid-template-columns: 2fr fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: "item1 item1" "item3 item2-carrousel";
+  }
 }
 @media (min-width: 1024px) {
-  .area, .area-destacada {
+  .area {
     display: grid;
     grid-template-columns: 5% 2fr 3fr 5%;
     grid-template-rows: auto auto;
     grid-template-areas: "item1 item1 item1 item1" ". item2 item3 .";
   }
+  .area-destacada {
+    display: grid;
+    grid-template-columns: 5% 2fr 3fr 5%;
+    grid-template-rows: auto auto;
+    grid-template-areas: "item1 item1 item1 item1" ". item3 item2-carrousel .";
+  }
 }
+/* ACORDEÓN #################################################*/
+.accordion {
+  width: 90%;
+  margin: 10px auto;
+  /* Centrar el acordeón */
+}
+
+.accordion-item {
+  width: 95%;
+}
+
+.accordion-body {
+  min-height: 150px;
+  /* Altura mínima para contenido */
+  overflow: hidden;
+  /* Opcional: maneja contenido muy largo */
+}
+
+/* GRID DE TARJETAS */
+.grid-tarjetas {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Columnas responsivas */
+  gap: 30px; /* Espacio entre tarjetas */
+  padding: 20px;
+  max-width: 1400px; /* Ancho máximo del grid */
+  margin: 0 auto; /* Centrado horizontal */
+}
+
+/* Sobreescribe estilos de Bootstrap para las cards */
+.grid-tarjetas .card {
+  width: 100%; /* Asegura que tome el ancho del grid */
+  border: none; /* Elimina borde por defecto */
+  border-radius: 12px; /* Bordes más redondeados */
+  overflow: hidden; /* Para que las imágenes no sobresalgan */
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+.grid-tarjetas .card:hover {
+  transform: translateY(-5px); /* Efecto "levitar" */
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Ajustes para imágenes dentro de las cards */
+.grid-tarjetas .card-img-top {
+  height: 200px; /* Altura fija para imágenes */
+  object-fit: cover; /* Recorta la imagen manteniendo proporciones */
+}
+
+/* FORMULARIOS #################################################*/
+form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #d95904;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #333;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid rgb(2, 66, 108.5);
+  border-radius: 4px;
+}
+
+/***************** BOTONES *******************************************************************/
+button {
+  width: 100%;
+  padding: 12px 10px;
+  background: rgb(2, 66, 108.5);
+  color: rgb(253.9538461538, 220.4769230769, 198.2461538462);
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease; /* Transición suave para todos los cambios */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil para profundidad */
+}
+button:hover {
+  background: rgb(27.9846153846, 161.8923076923, 250.8153846154);
+  transform: translateY(-1px); /* Levanta ligeramente el botón */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada al hover */
+}
+button:active {
+  transform: translateY(1px); /* Baja el botón 1px (como si se hundiera) */
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1); /* Sombra casi plana */
+}
+
+/* Pendientes */
 
 /*# sourceMappingURL=styles.css.map */

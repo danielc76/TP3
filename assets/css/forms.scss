@@ -1,0 +1,53 @@
+@use 'variables' as var;
+
+/* FORMULARIOS #################################################*/
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background: var.$col-ppal;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid var.$col-sec-oscuro;
+    border-radius: 4px;
+}
+
+/***************** BOTONES *******************************************************************/
+
+button {
+    width: 100%;
+    padding: 12px 10px; 
+    background: var.$col-sec-oscuro;
+    color: var.$col-ppal-claro;
+    font-size: 1.1rem;
+    font-weight: bold; 
+    border: none;
+    border-radius: 6px; 
+    cursor: pointer;
+    transition: all 0.3s ease; /* Transición suave para todos los cambios */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil para profundidad */
+
+    &:hover {
+        background: var.$col-sec-claro;
+        transform: translateY(-1px); /* Levanta ligeramente el botón */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada al hover */
+    }
+
+    &:active {
+        transform: translateY(1px);  /* Baja el botón 1px (como si se hundiera) */
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1); /* Sombra casi plana */
+    }
+
+}
