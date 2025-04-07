@@ -5,6 +5,7 @@ body {
     padding-top: 10px !important;
     background-color: var.$col-ppal-claro;
     display: flex;
+    justify-content: center;
     flex-direction: column;
     min-height: 100vh; /* Ocupa al menos el 100% del viewport */
     margin: 0;
@@ -12,15 +13,15 @@ body {
     main {
         margin-top: 70px;
         padding: 0 15px;
-        flex: 1; /* Hace que el contenido principal ocupe el espacio restante */
+       // flex: 1; /* Hace que el contenido principal ocupe el espacio restante */
 
     }
 
     footer {
-       // margin-top: 20px;
         flex-shrink: 0;
-        padding: 10px;
-        margin-top: auto; /* Fuerza al footer a quedarse abajo */
+        padding: 10px 0; 
+        margin-top: auto;
+        width: 100%;  
+        background-color: var.$col-sec-oscuro;  
     }
-
 }

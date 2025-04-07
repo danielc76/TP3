@@ -2,17 +2,53 @@
 
     @use "sass:color"; // Importa el módulo nativo de Sass
 
-    $col-ppal:#d95904;//  #d95904;
-    // PARAMETROS color.adjust($color, $red: x, $green: x, $blue: x, $hue: x, $saturation: x, $lightness: x, $alpha: x);
 
-    $col-ppal-fuerte: color.adjust($col-ppal, $hue: -2deg, $saturation:50%);
-    $col-sec: color.adjust($col-ppal, $hue: 180deg); // Color COMPLEMENTARIO
-    $col-ppal-claro: color.scale($col-ppal, $lightness: 80%); // Aumenta la luminosidad  
-    $col-ppal-medio: color.scale($col-ppal, $lightness: 30%); // Aumenta la luminosidad  
-    $col-sec-oscuro: color.scale($col-sec, $lightness: -50%); //  más oscuro
-    $col-ppal-oscuro: color.scale($col-ppal, $lightness: -50%); //  más oscuro
-    $col-sec-claro: color.scale($col-sec, $lightness: 20%);
-    $col-letra: #333333;   
-    
+$col-ppal: #d95904;
 
+
+// USO DE FOR
+@for $i from -5 through 5 {
+  $ajuste-hue: $i * 15;
+  $col-base: color.adjust($col-ppal, $hue: $ajuste-hue);
+
+  $col-sec: color.adjust($col-base, $hue: 180deg);
+
+  $colores-generados: (
+    col-ppal-claro: color.scale($col-base, $lightness: 80%),
+    col-ppal-medio: color.scale($col-base, $lightness: 40%),
+    col-ppal: $col-base,
+    col-ppal-fuerte: color.adjust($col-base, $hue: -5deg, $saturation: 50%),
+    col-ppal-oscuro: color.scale($col-base, $lightness: -30%),
+    col-sec-oscuro: color.scale($col-sec, $lightness: -50%),
+    col-sec: $col-sec,
+    col-sec-claro: color.scale($col-sec, $lightness: 20%)
+  );
+
+  //USO DE EACH
+  @each $nombre, $color in $colores-generados {
+    /// USO DE IF
+    .cuadro-#{$nombre}#{if($i == 0, '', '-' + $i)} {
+      background-color: $color;
+      width: 120px;
+      height: 60px;
+      display: inline-block;
+      margin: 5px;
+      border-radius: 8px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    }
+  }
+}
+
+
+$col-letra: #333333;   
+//$col-ppal:#d95904;//  #d95904;
+// PARAMETROS color.adjust($color, $red: x, $green: x, $blue: x, $hue: x, $saturation: x, $lightness: x, $alpha: x);
+
+$col-ppal-claro: color.scale($col-ppal, $lightness: 80%); // Aumenta la luminosidad  
+$col-ppal-medio: color.scale($col-ppal, $lightness: 40%); // Aumenta la luminosidad 
+$col-ppal-fuerte: color.adjust($col-ppal, $hue: -5deg, $saturation:50%);
+$col-ppal-oscuro: color.scale($col-ppal, $lightness: -30%); //  más oscuro
+$col-sec: color.adjust($col-ppal, $hue: 180deg); // Color COMPLEMENTARIO
+ $col-sec-oscuro: color.scale($col-sec, $lightness: -50%); //  más oscuro
+$col-sec-claro: color.scale($col-sec, $lightness: 20%);
 

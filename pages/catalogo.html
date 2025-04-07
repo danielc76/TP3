@@ -13,168 +13,240 @@
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="../index.html">
-                    <img src="../assets/img/loguito.gif" alt="Logo" width="35" height="35"
-                        class="d-inline-block align-text-medium">
-                    EmprenRed |
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+        <!-- Bloque Menú -->
+        <section>
+            <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="../index.html">
+                        <img src="../assets/img/loguito.gif" alt="Logo EmprenRed" width="35" height="35"
+                            class="d-inline-block align-text-medium">
+                        EmprenRed |
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
 
-                <div id="navbarNav" class="collapse navbar-collapse">
-                    <ul class="navbar-nav">
-                        <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="servicios.html">Servicios</a></li>
-                        <li class="nav-item"><a class="nav-link active" href="catalogo.html">Catálogo</a></li>
-                        <li class="nav-item"><a class="nav-link" href="tips.html">Tips</a></li>
-                        <li class="nav-item"><a class="nav-link" href="bolsa_empleo.html">Empleos</a></li>
-                        <li class="nav-item"><a class="nav-link" href="registrate.html">Registrate</a></li>
-                        <li class="nav-item"><a class="nav-link" href="iniciar.html">Logueate</a></li>
-                    </ul>
+                    <div id="navbarNav" class="collapse navbar-collapse">
+                        <ul class="navbar-nav">
+                            <!-- Menú Home  -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="../index.html" id="navbarDropdown"
+                                    role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Home
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <!-- Opciones del menú desplegable -->
+                                    <li><a class="dropdown-item" href="../index.html#bienvenidos">Bienvenidxs</a></li>
+                                    <li><a class="dropdown-item" href="../index.html#sobre-proyecto">Sobre el
+                                            proyecto</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="../index.html#quienes-somos">¿Quiénes somos?</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="../index.html#apoyos">Apoyos</a></li>
+                                    <li><a class="dropdown-item" href="../index.html#contacto">Contactanos</a></li>
+                                </ul>
+                            </li>
+
+                            <!-- Servicios  -->
+                            <li class="nav-item"><a class="nav-link" href="servicios.html">Servicios</a></li>
+
+                            <!-- Catálogo  -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle active" href="catalogo.html" id="navbarDropdown"
+                                    role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Catálogo
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <!-- Calzado -->
+                                    <li><a class="dropdown-item" href="catalogo.html#item-1">Calzado</a></li>
+                                    <!-- Clases -->
+                                    <li><a class="dropdown-item" href="catalogo.html#item-2">Clases</a></li>
+                                    <!-- Comidas -->
+                                    <li><a class="dropdown-item" href="catalogo.html#item-3">Comidas</a></li>
+                                </ul>
+                            </li>
+
+                            <!-- Menú Tips -->
+                            <li class="nav-item"><a class="nav-link" href="tips.html">Tips</a></li>
+
+                            <!-- Menú Animate -->
+                            <li class="nav-item"><a class="nav-link" href="animate.html">Animate</a></li>
+
+                            <!-- Menú Empleos  -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="bolsa_empleo.html" id="navbarDropdown"
+                                    role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Empleos
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <!-- Opciones del menú desplegable -->
+                                    <li><a class="dropdown-item" href="bolsa_empleo.html#tecnologia">Tecnología</a></li>
+                                    <li><a class="dropdown-item" href="bolsa_empleo.html#arte">Arte</a></li>
+                                    <li><a class="dropdown-item" href="bolsa_empleo.html#oficios">Oficios</a></li>
+                                </ul>
+                            </li>
+
+                            <!-- Menú Registrate  -->
+                            <li class="nav-item"><a class="nav-link" href="registrate.html">Registrate</a></li>
+
+                            <!-- Menú Iniciar  -->
+                            <li class="nav-item"><a class="nav-link" href="iniciar.html">Logueate</a></li>
+                        
+                            <!-- Menú Muestrario de Colores  -->
+                            <li class="nav-item"><a class="nav-link" href="colores.html">Paleta</a></li>
+
+                        </ul>
+                    </div>
                 </div>
-            </div>
-        </nav>
+            </nav>
+        </section>
     </header>
 
     <main>
-        <!-- Menú lateral fijo -->
-        <!--         <nav id="navbar-catalogo" class="fixed-menu">
-            <div class="nav nav-pills flex-column">
-                <a class="nav-link" href="#item-1">1 - Calzado</a>
-                <nav class="nav nav-pills flex-column">
-                    <a class="nav-link ms-3 my-1" href="#item-1-1">1.1 - Zapatos</a>
-                    <a class="nav-link ms-3 my-1" href="#item-1-2">1.2 - Zapatillas</a>
-                    <a class="nav-link ms-3 my-1" href="#item-1-3">1.3 - Ojotas</a>
-                </nav>
 
-                <a class="nav-link" href="#item-2">2 - Clases</a>
-                <nav class="nav nav-pills flex-column">
-                    <a class="nav-link ms-3 my-1" href="#item-2-1">2.1 - Guitarra</a>
-                    <a class="nav-link ms-3 my-1" href="#item-2-2">2.2 - Piano</a>
-                    <a class="nav-link ms-3 my-1" href="#item-2-3">2.3 - Inglés</a>
-                </nav>
+        <div id="item-1">
+            <h1 class="texto-ultra-destacado">Visitá el catálogo de Productos y Servicios de nuestra comunidad</h1>
+        </div>
 
-                <a class="nav-link" href="#item-3">3 - Comidas</a>
-                <nav class="nav nav-pills flex-column">
-                    <a class="nav-link ms-3 my-1" href="#item-3-1">3.1 - Regionales</a>
-                    <a class="nav-link ms-3 my-1" href="#item-3-2">3.2 - Arepas</a>
-                    <a class="nav-link ms-3 my-1" href="#item-3-3">3.3 - Tortas</a>
-                </nav>
+        <!-- CATALOGO -->
+        <section>
+            <!-- =========================================== -->
+            <!-- SECCIÓN 1: CALZADO -->
+            <!-- =========================================== -->
+            <div id="item-1">
+                <h2 class="texto-destacado">Calzado</h2>
             </div>
-        </nav>
- -->
-        <!-- Contenido del catálogo -->
-        <div class="catalogo-content">
-            <!-- Contenedor con scrollspy -->
-            <div data-bs-spy="scroll" data-bs-target="#navbar-catalogo" data-bs-smooth-scroll="true" tabindex="0">
 
-                <!-- =========================================== -->
-                <!-- SECCIÓN 1: CALZADO -->
-                <!-- =========================================== -->
-                <div id="item-1">
-                    <h2 class="texto-ultra-destacado">1. Calzado</h2>
+            <div id="item-1-1" class="container">
+
+                <div class="row">
+                    <!-- Producto 1.1 -->
+                    <div class="col-md-4 mb-4">
+                        <div class="card">
+                            <img class="card-img-top imagen-destacada" src="../assets/img/catalogo/1-1.jpg" alt="Zapatos Kuky">
+                            <div class="card-body">
+                                <h5 class="card-title">Zapatos Kuky</h5>
+                                <p class="card-text">Diseñados artesanalmente, cómodos y elegantes. Hechos para brillar en cada paso que des.</p>
+                                <a href="../pages/construccion.html" class="btn btn-primary">Ver detalles</a>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="col-md-4 mb-4">
+                        <div class="card">
+                            <img class="card-img-top imagen-destacada" src="../assets/img/catalogo/1-2.jpg" alt="Zapatillas Pepita">
+                            <div class="card-body">
+                                <h5 class="card-title">Zapatillas Pepita</h5>
+                                <p class="card-text">Zapatillas urbanas con diseño exclusivo y materiales reciclados. Livianas y resistentes.</p>
+                                <a href="../pages/construccion.html" class="btn btn-primary">Ver detalles</a>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="col-md-4 mb-4">
+                        <div class="card">
+                            <img class="card-img-top imagen-destacada" src="../assets/img/catalogo/1-3.jpg" alt="Ojotas Luly">
+                            <div class="card-body">
+                                <h5 class="card-title">Ojotas Luly</h5>
+                                <p class="card-text">Ideales para verano. Suaves, flexibles y con estampas únicas. Cómodas todo el día.</p>
+                                <a href="../pages/construccion.html" class="btn btn-primary">Ver detalles</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-
-                <div id="item-1-1">
-                    <h3 class="texto-destacado">1.1 - Zapatos</h3>
-                    <h4 class="letra-moderna">Zapatos Kuky</h4>
-                    <img class="imagen-destacada" src="../assets/img/catalogo/1-1.jpg" alt="Zapatos Kuky">
-                    <a href="../pages/construccion.html" class="btn btn-primary">Más información sobre este
-                        producto...</a>
-                </div>
-
-                <div id="item-1-2">
-                    <h3 class="texto-destacado">1.2 - Zapatillas</h3>
-                    <h4 class="letra-moderna">Pepita</h4>
-                    <img class="imagen-destacada" src="../assets/img/catalogo/1-2.jpg" alt="Zapatillas Pepita">
-                    <a href="../pages/construccion.html" class="btn btn-primary">Más información sobre este
-                        producto...</a>
-                </div>
-
-                <div id="item-1-3">
-                    <h3 class="texto-destacado">1.3 - Ojotas</h3>
-                    <p class="letra-moderna">Luly, Tus mejores Ojotas</p>
-                    <img class="imagen-destacada" src="../assets/img/catalogo/1-3.jpg" alt="Ojotas Luly">
-                    <a href="../pages/construccion.html" class="btn btn-primary">Más información sobre este
-                        producto...</a>
-                </div>
-
+            
                 <!-- =========================================== -->
                 <!-- SECCIÓN 2: CLASES -->
                 <!-- =========================================== -->
                 <div id="item-2">
-                    <h2 class="texto-ultra-destacado">2. Clases</h2>
+                    <h2 class="texto-destacado">Clases</h2>
                 </div>
-
-                <div id="item-2-1">
-                    <h3 class="texto-destacado">2.1 - Guitarra</h3>
-                    <p class="letra-moderna">Profesor: Juan Lirich</p>
-                    <img class="imagen-destacada" src="../assets/img/catalogo/2-1.jpg"
-                        alt="Clases de Guitarra con Juan Lirich">
-                    <a href="../pages/construccion.html" class="btn btn-primary">Más información sobre este
-                        producto...</a>
+            
+                <div class="row">
+                    <div class="col-md-4 mb-4">
+                        <div class="card">
+                            <img class="card-img-top imagen-destacada" src="../assets/img/catalogo/2-1.jpg" alt="Clases de Guitarra con Juan Lirich">
+                            <div class="card-body">
+                                <h5 class="card-title">Clases de Guitarra con Juan Lirich</h5>
+                                <p class="card-text">Aprendé desde cero o perfeccionate. Juan enseña con pasión, paciencia y método propio.</p>
+                                <a href="../pages/construccion.html" class="btn btn-primary">Ver detalles</a>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="col-md-4 mb-4">
+                        <div class="card">
+                            <img class="card-img-top imagen-destacada" src="../assets/img/catalogo/2-2.jpg" alt="Clases de Piano con Julieta Arrimolo">
+                            <div class="card-body">
+                                <h5 class="card-title">Profesora: Julieta Arrimolo</h5>
+                                <p class="card-text">Clases de piano para todas las edades. Técnica clásica con enfoque lúdico y creativo.</p>
+                                <a href="../pages/construccion.html" class="btn btn-primary">Ver detalles</a>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="col-md-4 mb-4">
+                        <div class="card">
+                            <img class="card-img-top imagen-destacada" src="../assets/img/catalogo/2-3.jpg" alt="Clases de Inglés en Academias British">
+                            <div class="card-body">
+                                <h5 class="card-title">Academias British</h5>
+                                <p class="card-text">Cursos dinámicos de inglés con certificación. Conversación, gramática y práctica real.</p>
+                                <a href="../pages/construccion.html" class="btn btn-primary">Ver detalles</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-
-                <div id="item-2-2">
-                    <h3 class="texto-destacado">2.2 - Piano</h3>
-                    <p class="letra-moderna">Profesora: Julieta Arrimolo</p>
-                    <img class="imagen-destacada" src="../assets/img/catalogo/2-2.jpg"
-                        alt="Clases de Piano con Julieta Arrimolo">
-                    <a href="../pages/construccion.html" class="btn btn-primary">Más información sobre este
-                        producto...</a>
-                </div>
-
-                <div id="item-2-3">
-                    <h3 class="texto-destacado">2.3 - Inglés</h3>
-                    <p class="letra-moderna">Academias British</p>
-                    <img class="imagen-destacada" src="../assets/img/catalogo/2-3.jpg"
-                        alt="Clases de Inglés en Academias British">
-                    <a href="../pages/construccion.html" class="btn btn-primary">Más información sobre este
-                        producto...</a>
-                </div>
-
+            
                 <!-- =========================================== -->
                 <!-- SECCIÓN 3: COMIDAS -->
                 <!-- =========================================== -->
                 <div id="item-3">
-                    <h2 class="texto-ultra-destacado">3. Comidas</h2>
+                    <h2 class="texto-destacado">3. Comidas</h2>
                 </div>
-
-                <div id="item-3-1">
-                    <h3 class="texto-destacado">3.1 - Regionales</h3>
-                    <p class="letra-moderna">Lidia</p>
-                    <img class="imagen-destacada" src="../assets/img/catalogo/3-1.jpg" alt="Comidas Regionales Lidia">
-                    <a href="../pages/construccion.html" class="btn btn-primary">Más información sobre este
-                        producto...</a>
-                </div>
-
-                <div id="item-3-2">
-                    <h3 class="texto-destacado">3.2 - Arepas</h3>
-                    <p class="letra-moderna">Venepas</p>
-                    <img class="imagen-destacada" src="../assets/img/catalogo/3-2.jpg" alt="Arepas Venepas">
-                    <a href="../pages/construccion.html" class="btn btn-primary">Más información sobre este
-                        producto...</a>
-                </div>
-
-                <div id="item-3-3">
-                    <h3 class="texto-destacado">3.3 - Tortas</h3>
-                    <p class="letra-moderna">Gula Gula</p>
-                    <img class="imagen-destacada" src="../assets/img/catalogo/3-3.jpg" alt="Tortas Gula Gula">
-                    <a href="../pages/construccion.html" class="btn btn-primary">Más información sobre este
-                        producto...</a>
+            
+                <div class="row">
+                    <div class="col-md-4 mb-4">
+                        <div class="card">
+                            <img class="card-img-top imagen-destacada" src="../assets/img/catalogo/3-1.jpg" alt="Comidas Regionales Lidia">
+                            <div class="card-body">
+                                <h5 class="card-title">Lidia</h5>
+                                <p class="card-text">Sabores del norte argentino con recetas de familia. Comida casera hecha con amor.</p>
+                                <a href="../pages/construccion.html" class="btn btn-primary">Ver detalles</a>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="col-md-4 mb-4">
+                        <div class="card">
+                            <img class="card-img-top imagen-destacada" src="../assets/img/catalogo/3-2.jpg" alt="Arepas Venepas">
+                            <div class="card-body">
+                                <h5 class="card-title">Venepas</h5>
+                                <p class="card-text">Arepas artesanales con rellenos típicos. Fusión venezolana en cada mordida.</p>
+                                <a href="../pages/construccion.html" class="btn btn-primary">Ver detalles</a>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="col-md-4 mb-4">
+                        <div class="card">
+                            <img class="card-img-top imagen-destacada" src="../assets/img/catalogo/3-3.jpg" alt="Tortas Gula Gula">
+                            <div class="card-body">
+                                <h5 class="card-title">Tortas Gula Gula</h5>
+                                <p class="card-text">Pastelería creativa con ingredientes naturales. Tortas personalizadas para cada ocasión.</p>
+                                <a href="../pages/construccion.html" class="btn btn-primary">Ver detalles</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
+            
     </main>
 
     <!-- Footer -->
     <footer>
-        <div class="bg-dark text-white p-3">
-            <p class="text-center">© 2025 Emprenred Instagram @emprenred</p>
-        </div>
+        <section class="texto-footer">
+            <p>© 2025 EmprenRed Instagram @emprenred</p>
+        </section>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>

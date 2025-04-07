@@ -12,45 +12,100 @@
 
 <body>
   <header>
-    <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="../index.html">
-          <img src="../assets/img/loguito.gif" alt="Logo" width="35" height="35"
-            class="d-inline-block align-text-medium">
-          EmprenRed |
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div id="navbarNav" class="collapse navbar-collapse">
-          <ul class="navbar-nav">
-            <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="servicios.html">Servicios</a></li>
-            <li class="nav-item"><a class="nav-link" href="catalogo.html">Catálogo</a></li>
-            <li class="nav-item"><a class="nav-link" href="tips.html">Tips</a></li>
-            <li class="nav-item"><a class="nav-link active" href="bolsa_empleo.html">Empleos</a></li>
-            <li class="nav-item"><a class="nav-link" href="registrate.html">Regístrate</a></li>
-            <li class="nav-item"><a class="nav-link" href="iniciar.html">Loguéate</a></li>
-          </ul>
+    <!-- Bloque Menú -->
+    <section>
+      <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="../index.html">
+            <img src="../assets/img/loguito.gif" alt="Logo EmprenRed" width="35" height="35"
+              class="d-inline-block align-text-medium">
+            EmprenRed |
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div id="navbarNav" class="collapse navbar-collapse">
+            <ul class="navbar-nav">
+              <!-- Menú Home  -->
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="../index.html" id="navbarDropdown" role="button"
+                  data-bs-toggle="dropdown" aria-expanded="false">
+                  Home
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <!-- Opciones del menú desplegable -->
+                  <li><a class="dropdown-item" href="../index.html#bienvenidos">Bienvenidxs</a></li>
+                  <li><a class="dropdown-item" href="../index.html#sobre-proyecto">Sobre el
+                      proyecto</a>
+                  </li>
+                  <li><a class="dropdown-item" href="../index.html#quienes-somos">¿Quiénes somos?</a>
+                  </li>
+                  <li><a class="dropdown-item" href="../index.html#apoyos">Apoyos</a></li>
+                  <li><a class="dropdown-item" href="../index.html#contacto">Contactanos</a></li>
+                </ul>
+              </li>
+
+              <!-- Servicios  -->
+              <li class="nav-item"><a class="nav-link" href="servicios.html">Servicios</a></li>
+
+              <!-- Catálogo  -->
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="catalogo.html" id="navbarDropdown" role="button"
+                  data-bs-toggle="dropdown" aria-expanded="false">
+                  Catálogo
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <!-- Calzado -->
+                  <li><a class="dropdown-item" href="catalogo.html#item-1">Calzado</a></li>
+                  <!-- Clases -->
+                  <li><a class="dropdown-item" href="catalogo.html#item-2">Clases</a></li>
+                  <!-- Comidas -->
+                  <li><a class="dropdown-item" href="catalogo.html#item-3">Comidas</a></li>
+                </ul>
+              </li>
+
+              <!-- Menú Tips -->
+              <li class="nav-item"><a class="nav-link" href="tips.html">Tips</a></li>
+
+              <!-- Menú Animate -->
+              <li class="nav-item"><a class="nav-link" href="animate.html">Animate</a></li>
+
+              <!-- Menú Empleos  -->
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle active" href="bolsa_empleo.html" id="navbarDropdown" role="button"
+                  data-bs-toggle="dropdown" aria-expanded="false">
+                  Empleos
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <!-- Opciones del menú desplegable -->
+                  <li><a class="dropdown-item" href="bolsa_empleo.html#tecnologia">Tecnología</a></li>
+                  <li><a class="dropdown-item" href="bolsa_empleo.html#arte">Arte</a></li>
+                  <li><a class="dropdown-item" href="bolsa_empleo.html#oficios">Oficios</a></li>
+                </ul>
+              </li>
+
+              <!-- Menú Registrate  -->
+              <li class="nav-item"><a class="nav-link" href="registrate.html">Registrate</a></li>
+
+              <!-- Menú Iniciar  -->
+              <li class="nav-item"><a class="nav-link" href="iniciar.html">Logueate</a></li>
+
+              <!-- Menú Muestrario de Colores  -->
+              <li class="nav-item"><a class="nav-link" href="colores.html">Paleta</a></li>
+
+            </ul>
+          </div>
         </div>
-      </div>
-    </nav>
+      </nav>
+    </section>
   </header>
 
   <main>
 
-    <div class="dropdown fixed-dropdown">
-      <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="true">
-        Elija la categoría..
-      </button>
-      <ul class="dropdown-menu">
-        <li><a class="dropdown-item" href="#tecnologia">Tecnología</a></li>
-        <li><a class="dropdown-item" href="#arte">Arte</a></li>
-        <li><a class="dropdown-item" href="#oficios">Oficios</a></li>
-      </ul>
-    </div>
+    <h1 class="texto-ultra-destacado">Bolsa de Empleo</h1>
+
     <section class="container">
-      <h1 class="texto-ultra-destacado">Bolsa de Empleo</h1>
       <!-- Fila 1: 2 ofertas de Tecnología -->
       <h2 id="tecnologia" class="texto-destacado">Tecnología</h2>
       <div class="row">
@@ -164,7 +219,7 @@
       </div>
 
       <!-- Fila 4: 4 ofertas de Oficios -->
-      <h2 id="oficios" class="texto-destacado">Oficios</h2> 
+      <h2 id="oficios" class="texto-destacado">Oficios</h2>
       <div class="row">
         <!-- Oferta 10 -->
         <div class="col-md-3 mb-4">
@@ -214,10 +269,11 @@
     </section>
   </main>
 
+  <!-- Footer -->
   <footer>
-    <div class="bg-dark text-white p-3 text-center">
-      © 2025 EmprenRed | Instagram @emprenred
-    </div>
+    <section class="texto-footer">
+      <p>© 2025 EmprenRed Instagram @emprenred</p>
+    </section>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>

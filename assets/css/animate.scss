@@ -2,20 +2,23 @@
 
 /* JUEGOS ANIMATE #################################################*/
 
-
-/* Estilos específicos para el contenedor de la imagen */
+.centrado {
+    display: flex;
+    justify-content: center;   // centra horizontalmente
+   // align-items: center;       // centra verticalmente
+   // min-height: 100vh;         // ocupa toda la altura de la pantalla
+  }
+  
 #image-game-container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    z-index: 1000;
-    padding-top: 70px;
     width: 80%;
+    max-width: 1000px; /* Añadido para limitar el ancho máximo */
     height: 70%;
-    background-image: radial-gradient(circle, var.$col-ppal, var.$col-sec-claro, var.$col-ppal-medio );
-    /* Ajuste para el navbar fijo */
+    text-align: center;
+    padding: 50px 20px;
+    background-image: radial-gradient(circle, var.$col-ppal, var.$col-sec-claro, var.$col-ppal-medio);
+    z-index: 1000;
+    border-radius: 15px; /* Opcional: bordes redondeados */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* Opcional: sombra */
 }
 
 /* Estilos específicos para la imagen */
@@ -204,6 +207,7 @@
 }
 
 /* ### Personalización de duración y delay para animaciones de Animate.css */
+
 .animate__animated.animate__bounce {
     animation-duration: 3s;
     /* Duración de la animación */
@@ -250,3 +254,4 @@
     background-color: #f8f9fa;
     border-radius: 10px;
 }
+

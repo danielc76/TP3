@@ -1,0 +1,25 @@
+@use 'variables' as var;
+
+/* ACORDEÓN #################################################*/
+.accordion {
+    width: 90%;
+    margin: 10px auto;
+}
+
+.accordion-item {
+    width: 95%;
+    //margin-bottom: 10px; /* Espacio entre ítems */
+    border: 1px solid #dee2e6; /* Borde para mejor visualización */
+    border-radius: 5px; /* Esquinas redondeadas */
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: var.$col-ppal-medio; /* Color cuando está abierto */
+    color: var.$col-sec-oscuro;
+}
+
+.accordion-body {
+    min-height: 150px;
+    padding: 20px; /* Más espacio interno */
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo ligeramente blanco */
+}

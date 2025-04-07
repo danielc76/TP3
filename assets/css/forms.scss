@@ -3,50 +3,63 @@
 
 /* FORMULARIOS #################################################*/
 form {
-    max-width: 500px; /* Amplié el ancho máximo */
-    margin: 2rem auto; /* Más espacio vertical */
-    padding: 2rem; /* Más padding interno */
+    max-width: 500px;
+    /* Amplié el ancho máximo */
+    margin: 2rem auto;
+    /* Más espacio vertical */
+    padding: 2rem;
+    /* Más padding interno */
     background: var.$col-ppal;
-    border-radius: 12px; /* Bordes más redondeados */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12); /* Sombra más pronunciada */
+    border-radius: 12px;
+    /* Bordes más redondeados */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+    /* Sombra más pronunciada */
 }
 
 /* Contenedor para cada campo del formulario */
 .form-group {
-    margin-bottom: 1.5rem; /* Espacio entre campos */
+    margin-bottom: 1.5rem;
+    /* Espacio entre campos */
     position: relative;
 }
 
 form label {
-    display: block; /* Asegura que ocupe su propia línea */ 
-    font-weight: 600; /* Peso intermedio */
-    color: var.$col-sec-oscuro; /* Usa tu variable de color */
-    margin-bottom: 0.5rem; /* Espacio entre label y input */
-    @include font-size(1.1);  
+    display: block;
+    /* Asegura que ocupe su propia línea */
+    font-weight: 600;
+    /* Peso intermedio */
+    color: var.$col-sec-oscuro;
+    /* Usa tu variable de color */
+    margin-bottom: 0.5rem;
+    /* Espacio entre label y input */
+    margin-top: 10px;
+    @include font-size(1.1);
 }
 
 form input,
 form textarea,
 form select {
     width: 100%;
-    padding: 12px; /* Más espacio interno */
+    padding: 6px 10px;
     border: 1px solid var.$col-sec-oscuro;
-    border-radius: 6px; /* Bordes más redondeados */
-    transition: all 0.3s ease; /* Transición suave */
-    background-color: rgba(255, 255, 255, 0.9); /* Fondo ligeramente blanco */
-    @include font-size(1.1);  
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.9);
+    @include font-size(1.0);
 
     &:focus {
         outline: none;
-        border-color: var.$col-ppal-fuerte; /* Color al enfocar */
-        box-shadow: 0 0 0 3px rgba(var.$col-ppal-fuerte, 0.2); /* Efecto de foco */
+        border-color: var.$col-ppal-fuerte;
+        box-shadow: 0 0 0 3px rgba(var.$col-ppal-fuerte, 0.2);
     }
-}
 
-/* Espaciado específico para textareas */
-form textarea {
-    min-height: 120px; /* Altura mínima */
-    resize: vertical; /* Permite redimensionar solo vertical */
+    /* Espaciado específico para textareas */
+    form textarea {
+        min-height: 120px;
+        /* Altura mínima */
+        resize: vertical;
+        /* Permite redimensionar solo vertical */
+    }
 }
 
 
@@ -63,5 +76,3 @@ form textarea {
         margin-right: 0.5rem;
     }
 }
-
-

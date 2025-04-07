@@ -48,9 +48,10 @@
     }
 }
 
-.texto-ultra-destacado {
-    margin: 20px auto;
+.texto-ultra-destacado {   
     @extend .texto-destacado;
+    margin: 0 auto 20px auto;
+    padding-top:0;
     // Colores
     color: var.$col-sec-claro;
     background-color: var.$col-ppal;
@@ -69,8 +70,10 @@
 
 .texto-footer {
     text-align: center;
-    background-color: var.$col-sec-oscuro;
     color: var.$col-ppal-claro;
     font-weight: bold;
+    max-width: 1200px;  
+    margin: 0 auto; 
+    padding: 10px; 
     @include font-size(1.1);
 }
